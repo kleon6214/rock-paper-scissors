@@ -30,11 +30,20 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === "Rock" && computerChoice === "Scissors") {
-        return "Human Wins"
 
+    if (humanChoice === computerChoice) {
+        return "tie"
+    }
+
+    else if (humanChoice === "Rock" && computerChoice === "Scissors" || humanChoice === "Paper" && computerChoice === "Rock" || humanChoice === "Scissors" && computerChoice === "Paper") {
+        return "Human wins"
 
     }
+
+    else {
+        return "Computer wins"
+    }
+
 }
 console.log(playRound());
 
